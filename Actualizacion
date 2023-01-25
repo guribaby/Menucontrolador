@@ -1,0 +1,150 @@
+package Cuadrado;
+
+import java.util.Scanner;
+
+
+public class Programa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		System.out.println("Bienvenido al Menú de Operaciones");
+		System.out.println("A continuación le presentamos las figuras que podemos analizar");
+		System.out.println("Cuadrado");
+		System.out.println("Circulo");
+		System.out.println("¿Esta interesado en alguno de estos?");
+		System.out.println("1.SI");
+		System.out.println("2.NO");
+		
+		int i;
+		Scanner interes = new Scanner(System.in);
+		i = interes.nextInt();
+			
+		if (i == 1) 
+		{
+			System.out.println("1.Cuadrado");
+			System.out.println("2.Circulo");
+			System.out.println("Seleccione la figura a analizar:");
+		
+			
+			int f;
+			Scanner figura = new Scanner (System.in);
+			f = figura.nextInt();
+			
+				
+			if (f ==1) 
+			{
+			 	
+				System.out.println("1.Calcular Area");
+				System.out.println("2.Calcular Perimetro");
+				System.out.println("3.Calcular Diagonal");
+				System.out.println("Seleccione la operacion a analizar:");
+				
+				
+				int o;
+				Scanner operacion = new Scanner (System.in);
+				o = operacion.nextInt();
+				
+					if (o == 1) {
+							System.out.println("Intoduce el valor del lado de tu cuadrado:");
+
+							double la;
+							Scanner ladocu = new Scanner (System.in);
+							la = ladocu.nextDouble();
+							
+							System.out.println("El área de tu cuadrado es:");
+							Cuadra z = new Cuadra();
+							
+							z.cambiarLado(la);
+							System.out.println(z.calcularAreac());
+							
+					}
+					if (o == 2) {
+							System.out.println("Intoduce el valor del lado de tu cuadrado:");
+	
+							double la;
+							Scanner ladocu = new Scanner (System.in);
+							la = ladocu.nextDouble();
+							
+							System.out.println("El perimetro de tu cuadrado es:");
+							
+							Cuadra z = new Cuadra();
+							
+							z.cambiarLado(la);
+							System.out.println(z.calcularPerimetroc());
+					}
+					if (o == 3) {
+							System.out.println("Intoduce el valor del lado de tu cuadrado:");
+							
+							double la;
+							Scanner ladocu = new Scanner (System.in);
+							la = ladocu.nextDouble();
+							
+							System.out.println("La diagonal de tu cuadrado es:");
+							
+							Cuadra z = new Cuadra();
+							
+							z.cambiarLado(la);
+							System.out.println(z.calcularDiagonalc());
+							}
+		
+					}
+				
+			if (f == 2) 
+			{
+				
+				System.out.println("1.Calcular Area");
+				System.out.println("2.Calcular Circunferencia");
+				System.out.println("Seleccione la operacion a analizar:");
+			
+
+				int a;
+				Scanner analizar = new Scanner (System.in);
+				a = analizar.nextInt();
+				
+				
+					if (a == 1) {
+						
+							System.out.println("Intoduce el valor del radio de tu circulo:");
+							
+							double r;
+							Scanner radior = new Scanner (System.in);
+							r = radior.nextDouble();
+							
+							System.out.println("El area de tu circulo es:");
+							
+							Cir w = new Cir();
+							
+							w.cambiarRadio(r);
+							System.out.println(w.calcularArea());
+						
+						
+					}
+					if (a == 2) {
+						
+							System.out.println("Intoduce el valor del radio de tu circulo:");
+							
+							double r;
+							Scanner radior = new Scanner (System.in);
+							r = radior.nextDouble();
+							
+							System.out.println("La circunferencia de tu circulo es:");
+							
+							Cir w = new Cir();
+							
+							w.cambiarRadio(r);
+							System.out.println(w.calcularCircunferencia());
+					}		
+			}	
+		}
+		
+		else 
+		{
+			
+			System.out.println("Por el momento no incorporamos mas figuras :(");
+			System.out.println("Proximamanete contaremos con mas :)");
+			System.out.println("Gracias por utilizar nuestro ptograma !!!");
+			
+		}		
+	}
+}
