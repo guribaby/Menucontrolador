@@ -1,0 +1,133 @@
+package Cuadrado;
+
+import java.util.Scanner;
+
+public class pro {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Gracias por utilizar nuestro Menú de operaciones");
+		System.out.println("A continuacion se le presentaran las figuras que se pueden analizar");
+
+		
+		while (true) {
+		System.out.println("Menú de Operaciones");
+		System.out.println("1. Cuadrado");
+		System.out.println("2. Círculo");
+		System.out.println("3. Salir");
+		System.out.println("Inserta tu opcion en base a la numeración:");
+		
+		int a;
+		Scanner interes = new Scanner(System.in);
+		a = interes.nextInt();	
+		
+		switch (a) {
+		
+		case 1:
+			
+			System.out.println("Ingresa la longitud de tu lado del cuadrado:");
+			double lad;
+			Scanner ladocu = new Scanner (System.in);
+			lad = ladocu.nextDouble();
+		
+			System.out.println("Selecciona la operacion a relalizar");
+			System.out.println("1.Calcular Area");
+			System.out.println("2.Calcular Perimetro");
+			System.out.println("3.Calcular Diagonal");
+			
+			int o;
+			Scanner operacion = new Scanner (System.in);
+			o = operacion.nextInt();
+				
+				switch (o) {
+				
+				case 1:
+					
+					System.out.println("El área de tu cuadrado es:");
+					Cuadra z = new Cuadra();
+					z.cambiarLado(lad);
+					System.out.println(z.calcularAreac());
+					break;
+					
+				case 2:
+					
+					System.out.println("El perimetro de tu cuadrado es:");
+					Cuadra x = new Cuadra();
+					x.cambiarLado(lad);
+					System.out.println(x.calcularPerimetroc());
+					break;
+					
+				case 3:
+					
+					System.out.println("La diagonal de tu cuadrado es:");
+					
+					Cuadra q = new Cuadra();
+					
+					q.cambiarLado(lad);
+					System.out.println(q.calcularDiagonalc());
+					break;
+									
+				default:
+					System.out.println("Caracter no valido");
+					System.out.println("Porfavor inserte uno valido");
+					break;
+					
+				}
+				break;
+		case 2:		
+		
+			System.out.println("Intoduce el valor del radio de tu circulo:");
+			double r;
+			Scanner radior = new Scanner (System.in);
+			r = radior.nextDouble();
+	
+			System.out.println("1.Calcular Area");
+			System.out.println("2.Calcular Circunferencia");
+			System.out.println("Seleccione la operacion a analizar:");
+			int w;
+			Scanner analizar = new Scanner (System.in);
+			w = analizar.nextInt();
+			
+			switch (w) {
+			
+				case 1:
+					System.out.println("El area de tu circulo es:");
+					
+					Cir e = new Cir();
+					
+					e.cambiarRadio(r);
+					System.out.println(e.calcularArea());
+					break;
+					
+				case 2:
+					System.out.println("La circunferencia de tu circulo es:");
+					
+					Cir t = new Cir();
+					
+					t.cambiarRadio(r);
+					System.out.println(t.calcularCircunferencia());
+					break;
+			
+				default:
+					System.out.println("Caracter no valido");
+					System.out.println("Porfavor inserte uno valido");
+					break;
+				}
+			break;
+		case 3:
+			System.out.println("Gracias por utilizar nuestro programa");
+			System.out.println("Saliendo ...");
+			System.exit(0);
+			break;
+			
+		default:
+			
+			System.out.println("Caracter no valido");
+			System.out.println("Porfavor inserte uno valido");
+			break;		
+		}
+	}
+	}
+}
+	
